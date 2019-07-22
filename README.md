@@ -11,7 +11,7 @@ Playing with algorithms
 * binary
 * jump
 
-## Launch config for testing
+## VSCode launch config for debugging Mocha tests
 ```
 {
     "type": "node",
