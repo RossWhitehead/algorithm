@@ -13,7 +13,7 @@ Playing with algorithms
 
 ## Launch config for testing
 ```
-    {
+{
     "type": "node",
     "request": "launch",
     "name": "Mocha Tests",
@@ -25,5 +25,6 @@ Playing with algorithms
         "${workspaceFolder}/tests/**/*.spec.js"
     ],
     "internalConsoleOptions": "openOnSessionStart"
+}
 ```
         
