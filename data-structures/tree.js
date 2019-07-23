@@ -1,10 +1,13 @@
+
+const padding = '-'
+
 class Tree {
     constructor() {
         this.children = []
     }
 
     appendChild(name) {
-        this.children.push(new TreeNode(name))
+        this.children.push(new TreeNode(name, this))
         return this
     }
 
@@ -19,12 +22,23 @@ class Tree {
         json += ']}'
         return json
     }
+
+    toString() {
+        let str = 'tree\n'
+        let pad = padding
+        if (this.children.length) {
+            this.children.forEach((child) => {
+                str += child.toString(pad)
+            })
+        }
+        return str
+    }
 }
 
 class TreeNode {
     constructor(name, parent) {
-        this.name = name,
-            this.children = []
+        this.name = name
+        this.children = []
         this.parent = parent
     }
 
@@ -47,6 +61,17 @@ class TreeNode {
         }
         json += ']}'
         return json
+    }
+
+    toString(pad) {
+        let str = pad + this.name + '\n'
+        if (this.children.length) {
+            pad += padding
+            this.children.forEach((child) => {
+                str += child.toString(pad) 
+            })
+        }
+        return str
     }
 }
 
