@@ -1,15 +1,22 @@
-# algorithms
+# Algorithms
 Playing with algorithms
 
-## sort
+## Sort
 * selection
 * bubble
 * insertion
 
-## search
+## Search
 * linear
 * binary
 * jump
+
+## Data structures
+* Queue
+* FastQueue
+* Stack
+* LinkedList
+* Tree
 
 ## VSCode launch config for debugging Mocha tests
 ```
