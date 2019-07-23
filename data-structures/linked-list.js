@@ -3,7 +3,7 @@ class LinkedList {
         this.head = null
     }
     toArray() {
-        let arr = new Array()
+        let arr = []
         let node = this.head
         while (node !== null) {
             arr.push(node.data)
@@ -13,7 +13,7 @@ class LinkedList {
     }
 }
 
-class Node {
+class LinkedListNode {
     constructor(data, next = null) {
         this.data = data,
             this.next = next
@@ -21,6 +21,6 @@ class Node {
 }
 
 module.exports = {
-    LinkedList, Node
+    LinkedList, LinkedListNode
 }
 

@@ -1,4 +1,4 @@
-var { LinkedList, Node } = require('./data-structures/linked-list')
+var { LinkedList, LinkedListNode } = require('./data-structures/linked-list')
 
 module.exports = {
     selection: (arr) => {
@@ -48,18 +48,18 @@ module.exports = {
             let isInserted = false
             currentNode = linkedList.head
             if(currentNode === null) {
-                linkedList.head = new Node(arr[i])
+                linkedList.head = new LinkedListNode(arr[i])
             } else {
                 while(currentNode && isInserted === false) {
                     if(currentNode.data > arr[i]) {
-                        const nextNode = new Node(currentNode.data, currentNode.next) 
+                        const nextNode = new LinkedListNode(currentNode.data, currentNode.next) 
                         currentNode.data = arr[i]
                         currentNode.next = nextNode
                         isInserted = true
                     }
                     else {
                         if(currentNode.next === null) {
-                            currentNode.next = new Node(arr[i])
+                            currentNode.next = new LinkedListNode(arr[i])
                             isInserted = true
                         } else {
                             currentNode = currentNode.next

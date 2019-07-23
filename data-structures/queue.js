@@ -8,29 +8,29 @@ class Queue {
         this.maxSize = size
     }
 
-    enqueue = (item) => {
+    enqueue(item) {
         if (this.maxSize && this.data.length === this.maxSize) {
             throw new Error('Overflow')
         }
         this.data.push(item)
     }
 
-    dequeue = () => {
+    dequeue() {
         if (this.isEmpty()) {
             throw new Error('Underflow')
         }
         return this.data.shift()
     }
 
-    peek = () => {
+    peek() {
         return this.isEmpty() ? this.data[0] : undefined
     }
 
-    isFull = () => {
+    isFull() {
         return this.data.length === maxSize
     }
 
-    isEmpty = () => {
+    isEmpty() {
         return !this.data.length
     }
 }

@@ -1,32 +1,29 @@
 module.exports = {
-    FastQueue
+    Stack
 }
 
-class FastQueue {
+class Stack {
     constructor(size) {
-        const data = []
-        const maxSize = size
-        const start = 0
+        this.items = []
+        this.maxSize = size
     }
 
-    enqueue(item) {
+    push(item) {
         if (this.maxSize && this.data.length === this.maxSize) {
             throw new Error('Overflow')
         }
         this.data.push(item)
     }
 
-    dequeue() {
+    pop() {
         if (this.isEmpty()) {
             throw new Error('Underflow')
         }
-
-        return this.data[start]
-        start++
+        return this.data.pop()
     }
 
     peek() {
-        return this.data.length >= start ? this.data[start] : undefined
+        return this.isEmpty() ? this.data[data.length - 1] : undefined
     }
 
     isFull() {
