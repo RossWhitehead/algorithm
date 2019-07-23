@@ -1,5 +1,12 @@
 module.exports = {
     linear: (arr, x) => {
+        if(Array.isArray(arr) === false) {
+            throw new Error('arr is not an array')
+        }
+        if(typeof x === 'undefined') {
+            throw new Error('x is undefined')
+        }
+        
         for(element of arr) {
             if(element === x) return true
         }    

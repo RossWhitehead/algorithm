@@ -16,7 +16,7 @@ class Queue {
     }
 
     dequeue = () => {
-        if (this.data.length === 0) {
+        if (this.isEmpty()) {
             throw new Error('Underflow')
         }
         return this.data.shift()
@@ -27,11 +27,11 @@ class Queue {
     }
 
     isFull = () => {
-        return this.data.length = maxSize
+        return this.data.length === maxSize
     }
 
     isEmpty = () => {
-        return this.data.length = 0
+        return !this.data.length
     }
 }
 
