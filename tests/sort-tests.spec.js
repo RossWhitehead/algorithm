@@ -1,5 +1,5 @@
 var assert = require('assert')
-var { selection , bubble, insertion } = require('../Sort')
+var { selection , bubble, insertion } = require('../sort')
 
 describe('Sort', function() {
     describe('selection', function() {

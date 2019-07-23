@@ -1,5 +1,5 @@
 var assert = require('assert')
-var { linear, binary, step } = require('../Search')
+var { linear, binary, step } = require('../search')
 
 describe('Search', function() {
     describe('linear', function() {
