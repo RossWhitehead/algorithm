@@ -1,7 +1,3 @@
-module.exports = {
-    FastQueue
-}
-
 class FastQueue {
     constructor(size) {
         const data = []
@@ -36,4 +32,8 @@ class FastQueue {
     isEmpty() {
         return !this.data.length
     }
+}
+
+module.exports = {
+    FastQueue
 }

@@ -1,7 +1,3 @@
-module.exports = {
-    Stack
-}
-
 class Stack {
     constructor(size) {
         this.items = []
@@ -34,3 +30,8 @@ class Stack {
         return !this.data.length
     }
 }
+
+module.exports = {
+    Stack
+}
+

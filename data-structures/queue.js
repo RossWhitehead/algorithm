@@ -1,7 +1,3 @@
-module.exports = {
-    Queue
-}
-
 class Queue {
     constructor(size) {
         this.items = []
@@ -34,4 +30,9 @@ class Queue {
         return !this.data.length
     }
 }
+
+module.exports = {
+    Queue
+}
+
 
