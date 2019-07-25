@@ -28,6 +28,6 @@ describe('Graph', function () {
         g.addEdge('E', 'C') 
         g.addEdge('C', 'F') 
         expected = ['A', 'B', 'D', 'E', 'C', 'F']
-        assert.equal(expected, g.bft('A'))
+        assert.deepEqual(expected, g.bft('A'))
     })
 })

@@ -27,12 +27,14 @@ class Graph {
     }
 
     _traverse(vertex, results, visited) {
-        if (!visited.has(vertex)) {
+        if (!results.includes(vertex)) {
             results.push(vertex)
+        }
+        if (!visited.has(vertex)) {
             visited.add(vertex)
 
             this.adjList.get(vertex).forEach((edge) => {
-                if (!visited.has(edge)) {
+                if (!results.includes(edge)) {
                     results.push(edge)
                 }
             })
