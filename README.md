@@ -17,6 +17,7 @@ Playing with algorithms
 * Stack
 * LinkedList
 * Tree
+* Graph
 
 ## VSCode launch config for debugging Mocha tests
 ```
