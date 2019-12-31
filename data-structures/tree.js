@@ -73,6 +73,10 @@ class TreeNode {
         }
         return str
     }
+
+    inOrderTraverse() {
+        
+    }
 }
 
 module.exports = {
